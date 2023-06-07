@@ -130,7 +130,7 @@ def pep(session):
             )
 
     data = list((Counter(status_list)).items())
-    data.append(('Total', len(status_list)))
+    data.append(('Total', sum(Counter(status_list).values())))
     results += data
     return results
 
